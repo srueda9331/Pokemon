@@ -1,0 +1,66 @@
+
+body, html {
+  height: 800px;
+  margin: 0;
+ }
+ 
+ .background-main {
+ background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://phantom-marca.unidadeditorial.es/2a6bb9293b020d388e4c1b1d3e640f1a/resize/1320/f/jpg/assets/multimedia/imagenes/2021/02/28/16145196328904.jpg');
+ height: 802px;
+ width: 1300px;
+ background-position: center;
+ background-repeat: no-repeat;
+ /* background-size: cover; */
+ padding: 1px;
+ }
+
+
+.main-button {
+
+    background-color: rgb(200, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 30px; 
+    margin-left: 20px;
+    padding-right: 16px;
+    padding-left: 16px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: opacity 0.8s;
+    margin-top: 10px;
+    font-size: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+
+
+}
+
+.main-button:hover{
+  color: white;
+  background-color: rgb(153, 58, 58);
+  opacity: 0.9; 
+  
+}
+
+.title{
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+  color: rgb(235, 181, 3);
+  -webkit-text-stroke: 3px rgb(0, 60, 255);
+  font-family: arial; 
+  margin-right: 82px;
+}
+
+.initial-text{
+  margin-top: 310px;
+  font-size: 54px;
+  color: rgb(245, 194, 28);
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  font-weight: bold;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

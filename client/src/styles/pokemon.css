@@ -1,0 +1,39 @@
+.container-pokemon{
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px;
+  width: 200px;
+  height: 250px;
+  border: 3px solid red;
+  background: rgb(214, 250, 255);
+  border-radius: 15px;
+}
+.container-pokemon:hover{
+  background: rgb(20, 255, 20);
+  border: 3px solid rgb(0, 119, 255);
+  transition: 0.8s;
+}
+
+.types{
+  margin-top: 0px;
+  display: inline-block;
+  flex-direction: row;
+}
+
+.attack {
+  margin-top: 2px;
+  font-size: 15px;
+  padding-bottom: 0px;
+  
+}
+
+.img{
+  margin-top: 0px;
+}
+.title-pokemon{
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 19px;
+}

@@ -1,0 +1,20 @@
+.paginated{
+  /* display: flex;
+  flex-direction: row;
+  margin: 0px; */
+  color: red;
+  font-weight: bold;
+  margin-left: 200px;
+  
+}
+
+.eachN{
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
