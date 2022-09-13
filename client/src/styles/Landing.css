@@ -44,16 +44,7 @@ body, html {
   
 }
 
-.title{
-  font-size: 60px;
-  font-style: italic;
-  font-weight: bold;
-  margin-top: 5px;
-  color: rgb(235, 181, 3);
-  -webkit-text-stroke: 3px rgb(0, 60, 255);
-  font-family: arial; 
-  margin-right: 82px;
-}
+
 
 .initial-text{
   margin-top: 310px;
