@@ -1,0 +1,187 @@
+.home{
+  padding-bottom: 180px;
+  /* background-position: right; */
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://geeky.com.ar/wp-content/uploads/2018/11/wp2692587-e1543262552286-1024x672.jpg.webp');
+  background-repeat: no-repeat;
+  background-position-x: 232px;
+  background-position-y: 60px;
+  background-size: 1100px 700px;
+  background-attachment: fixed;
+  padding-bottom: -150px;
+  /* margin-right: -100px; */
+  
+}
+
+.content{
+  height: 1000px;
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 245px;
+  width: 80%;
+  /* min-height: 1300px; */
+}
+
+
+.pokemons{
+  vertical-align: top;
+  margin: 18px;
+  margin-top: 20px;
+}
+
+.pokeball1{
+  height: 210px;
+  margin-left: 210px;  
+}
+
+.selects{
+  width: 160px;
+  border-radius: 5px;
+  border: 2px solid blue;
+  background-color: white;
+
+}
+
+
+.title-load{
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+  font-family: arial;
+  padding-bottom: 0px;
+  margin-top: 80px;
+  margin-left: -20px;
+  
+}
+
+.searchBar1{
+  color: black;
+  width: 10px;
+  height: 10px;
+  
+}
+
+.no-name{
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  margin-top: 47px;
+  background-size: 1000px;
+  color: white;
+}
+
+.nav-bar{
+  display: flex;
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  padding: 0px;
+  background-color: rgb(167, 35, 35);
+  border-bottom: 2px solid black;
+  z-index: 1; /*  PROPIEDAD IMPORTANTE - PROPIEDAD IMPORTANTE - PROPIEDAD IMPORTANTE */
+
+}
+
+.bar{
+  margin-top: 40px;
+  height: 25px;
+  flex-direction: row;
+  color: black;
+  margin-left: 260px;
+  border: 1px solid rgb(140, 212, 32);
+  font-size: 13px;
+  
+}
+
+.bar-button{
+  margin-top: 40px;
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: rgb(140, 212, 32);
+  margin-left: 0px;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.bar-button:hover{
+  opacity: 0.9;
+  color: rgb(229, 229, 233);
+}
+
+
+.filters{
+  position: fixed;
+  height: 85%;
+  margin-top: 83px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('https://steamuserimages-a.akamaihd.net/ugc/105106022019032191/B0ABAE901B0ADFDD725E29136D5F7DF1A92F2C4E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false'); */
+  background-size: 280px 600px;
+  width: 234px;
+  /* border-right: 3px solid black; */
+  /* border-top: 2px solid black; */
+  opacity: 0.9;
+  background-color: rgb(102, 102, 255);
+  
+}
+
+.alp-strong{
+  margin-top: 50px;
+}
+
+.all-byMe{
+  margin-top: 65px;
+  font-family: 'Courier New', Courier, monospace;
+  color: brown;
+  font-weight: bold;
+}
+
+.create-show{
+  margin-top: 60px;
+  flex-direction: column;
+}
+
+.pagin{
+  margin-top: 150px;
+  /* position: fixed; */
+}
+
+.creat{
+  background-color: rgb(31, 192, 31);
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 160px;
+  border: 2px solid blue;
+  font-size: 15px;
+}
+
+.show{
+  margin: 20px 0px;
+  background-color: rgb(31, 192, 31);
+  border: 1px solid black;
+  padding-left: 17px;
+  padding-right: 17px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 160px;
+  border: 2px solid blue;
+  font-size: 13px;
+}
