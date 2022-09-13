@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemons, pokemonsInDb, orderByName, orderByAttack, getAllTypes, findType } from "../actions";
 import { Link } from "react-router-dom";
-import Pokemon from "./pokemon";
-import Paginate from "./paginate";
-import { SearchBar } from "./searchBar";
+import Pokemon from "./Pokemon";
+import Paginate from "./Paginate";
+import { SearchBar } from "./SearchBar";
 
 
 export default function Home(){
