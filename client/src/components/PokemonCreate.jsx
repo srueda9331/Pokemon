@@ -1,15 +1,12 @@
-import '../styles/pokemonCreate.css'
+import '../styles/PokemonCreate.css'
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createPokemon, getTypesNames, getPokemons } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
+import swal from 'sweetalert'
 
-// function validName(str){
-//   if(!str) return true;
-//   if(typeof str !== 'string') return true;
-//   if(str.length < 1) return true;
-// }
+
 
 function validate(input){
   let errors = {};
@@ -29,13 +26,7 @@ function validate(input){
   else if(!/(http(s?):)([/|.|\w|\s|-])*\.(jpg|gif|png|jpeg)/.test(input.image)) {
     errors.image = 'The URL is invalid, it must be the type of png, jpeg, jpg, gif'
   }
-  // else if(typeof input.name !== 'string'){
-  //   errors.name = 'The type of data must be text'
-  // }
-  
-  // if(!input.img){
-  //   errors.img = 'An image is required'
-  // }
+
   if(!input.hp){
     errors.hp = 'Your pokemon must have a life points number'
   }
@@ -68,7 +59,7 @@ export function PokemonCreate(){
   const history = useHistory()
   const types = useSelector((state) => state.types);
   const [errors, setErrors ] = useState({})  // {true}
-  // const [handleButton, setHandleButton ] =useState(Object.keys(errors).lenngth > 0? true : false);
+ 
 
 
   const [input, setInput ] = useState({
@@ -103,19 +94,11 @@ export function PokemonCreate(){
       [e.target.name] : e.target.value
     }))
     
-    // setErrors(validate(input))
+  
     
     console.log(input + ' llega');
     
   }
-
-  // function handleSelect(e){
-  //   setInput({
-  //     ...input,
-  //     types: Array.from(new Set([...input.types, e.target.value])) 
-  //   })  
-   
-  // }
 
  
 
@@ -292,4 +275,3 @@ export function PokemonCreate(){
   </div>
   )
 }
-// disabled={handleButton? true : false}
