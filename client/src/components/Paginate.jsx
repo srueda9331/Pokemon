@@ -1,4 +1,4 @@
-import '../styles/paginate.css'
+import '../styles/Paginate.css'
 import React from "react";
 
 export default function Paginate({pokemonPerPage, pokemons, paginate}){
