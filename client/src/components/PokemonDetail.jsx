@@ -51,8 +51,8 @@ export function PokemonDetail(){
           </div>
 
           <div className="detail2">
-          <img style={{height: '151px', marginLeft:'-270px', marginBottom:'130px', zIndex:-1}}src={circle} />
-          <img style={{height: '128px', marginLeft:'-139px', marginBottom:'141px', zIndex:1}}src={circleWhite} />
+          <img style={{height: '151px', marginLeft:'-270px', marginBottom:'130px', zIndex:-1}}src={circle} alt='circle' />
+          <img style={{height: '128px', marginLeft:'-139px', marginBottom:'141px', zIndex:1}}src={circleWhite} alt='circle-white'/>
             <div className='pokemond2'>
               <h3>Life points: {pokemon.hp}</h3>
               <h3>Attack: {pokemon.attack}</h3>
@@ -70,11 +70,10 @@ export function PokemonDetail(){
               {
                 pokemon?.types? <h3>Type Two: {pokemon.types[1]?.name[0].toUpperCase() + pokemon.types[1]?.name.slice(1)}</h3> : false
               }
-          
 
-              
               <h3>Height: {pokemon.height > 9? pokemon.height.toString()[0] + '.' + pokemon.height.toString()[1]: '0.' + pokemon.height } mts</h3>
-              <h3>Weight: {pokemon.weight * 10 ** -1} Kg</h3>
+              <h3>Weight: {pokemon.weight} Kg</h3>
+
               <Link to='/home'>
                 <button className='button-detail'>Get back</button>
             </Link> 
