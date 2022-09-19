@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { Pokemon, Types } = require('../db');
-const { Op, where } = require('sequelize')
+const { Op } = require('sequelize')
 
 const axios = require('axios');
 const router = Router();
@@ -11,7 +11,7 @@ const getAllPokemons = async () => {
     let pokemonApi;
     let allApiPokemons = [];
 
-    for (let i = 1; i <= 16; i++) {
+    for (let i = 1; i <= 41; i++) {
       pokemonApi = await axios.get('https://pokeapi.co/api/v2/pokemon/' + i)
       let eachPokemon = {
         id: pokemonApi.data.id,
@@ -23,7 +23,6 @@ const getAllPokemons = async () => {
         // types: pokemonApi.data.types.map(el => el.type.name),
       }
       allApiPokemons.push(eachPokemon)
-      // console.log(allApiPokemons);
     }
     let pokemonsDb = await Pokemon.findAll({ include : Types})
     let allPokemonsDb = pokemonsDb.map(pokemon => {
@@ -50,37 +49,50 @@ const getAllPokemons = async () => {
   }
 }
 
-const getPokemonApi = async (param) => {
-  let searchAll = await axios.get('https://pokeapi.co/api/v2/pokemon/' + param)
-  let pokeApi =   {
-    id: searchAll.data.id,
-    name: searchAll.data.name,
-    img: searchAll.data.sprites.other.dream_world.front_default,
-    attack: searchAll.data.stats[1].base_stat,
-    typeOne: searchAll.data.types[0].type.name,
-    typeTwo: searchAll.data.types[1]?.type.name
 
+const getOnePokemon = async (param) => {
+  try {
+  let searchInDb = await Pokemon.findOne({ where: {name : param.toLowerCase()}, include: Types})
+  if(searchInDb){
+    let pokeInDb =   {
+      id: searchInDb.id,
+      name: searchInDb.name,
+      img: searchInDb.image,
+      attack: searchInDb.attack,
+      typeOne: searchInDb?.types[0]?.name,
+      typeTwo: searchInDb?.types[1]?.name,
+
+    }
+  return pokeInDb
+  }
+  let searchOneFromAPI = await axios.get('https://pokeapi.co/api/v2/pokemon/' + param.toLowerCase())
+  if(searchOneFromAPI){
+    let pokeApi =   {
+      id: searchOneFromAPI.data.id,
+      name: searchOneFromAPI.data.name,
+      img: searchOneFromAPI.data.sprites.other.dream_world.front_default,
+      attack: searchOneFromAPI.data.stats[1].base_stat,
+      typeOne: searchOneFromAPI.data.types[0].type.name,
+      typeTwo: searchOneFromAPI.data.types[1]?.type.name
+  
+    }
+    return pokeApi
+  }
+  } catch (error) {
+    res.status(404).send('Pokemon not found')
   }
 
-  return pokeApi;
 }
 
 router.get('/', async (req, res) => {
 
   const name = req.query.name
   let allPokemons = await getAllPokemons();
+ 
   if(name){
     try {
-      
-        let oneFromApiPokemons = await getPokemonApi(name.toLowerCase())
-        if(oneFromApiPokemons) res.status(200).send(oneFromApiPokemons)
-        else{
-          let findInDb = await Pokemon.findOne({ where : {name: name.toLocaleLowerCase()}})
-          if(findInDb) return res.status(200).send(findInDb)
-        }
-        // let filteredPokemon = await allPokemons.filter(p => p.name.toLocaleLowerCase().includes(name.toLocaleLowerCase()))
-        // if(filteredPokemon.length > 0) res.status(200).send(filteredPokemon)
-        // else res.status(201).send('Not found')
+      let pokemonFound = await getOnePokemon(name.toLowerCase())
+      if(pokemonFound) res.status(200).send(pokemonFound)
       
     } catch (error) {
       res.status(400).send({error: error.message})
@@ -100,7 +112,7 @@ router.post('/', async (req, res) => {
   if(!name) {throw new TypeError({msg: 'No name'})}
   let atLeatOne = await Pokemon.findOne({ where : {name: name.toLocaleLowerCase()}})
   if(atLeatOne) {throw new Error('The pokemon with that name already exists')}
-
+  // if(!image && !hp && !attack && !defense && !height && !weight) res.status(400).send('There are missing fields')
 
     let newPokemon = await Pokemon.create({
       name,
@@ -122,7 +134,7 @@ router.post('/', async (req, res) => {
     await newPokemon.addTypes(typeDB)
     res.send('Pokemon created successfully');
   } catch (error) {
-    res.status(404).send(error)
+    res.status(404).json({msg: 'There are missing fields'})
   }
 })
 
@@ -155,7 +167,8 @@ router.get('/:id', async (req, res) => {
           typeOne: pokemonById.data.types[0].type.name,
           typeTwo: pokemonById.data.types[1]?.type.name,
           height: pokemonById.data.height,
-          weight: pokemonById.data.weight
+          weight: pokemonById.data.weight,
+          createdInDb: pokemonById?.createdInDb
         }
 
      if(foundPokemon) res.send(foundPokemon)
@@ -165,7 +178,6 @@ router.get('/:id', async (req, res) => {
     }
   }
 })
-
 
 
 // {
