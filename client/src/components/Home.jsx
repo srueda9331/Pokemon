@@ -17,6 +17,7 @@ export default function Home(){
   const idxofLastPokemon = currentPage * pokemonsPerPage
   const idxofFirstPokemon = idxofLastPokemon - pokemonsPerPage  
   const currentPokemons = pokemons.slice(idxofFirstPokemon, idxofLastPokemon)
+  window.scroll(0,0)
 
 
   const paginate = (pageNumber) => {
@@ -36,15 +37,11 @@ export default function Home(){
 
   function handleClick(e){
     e.preventDefault();
-    dispatch(getPokemons())
+    window.location.reload()
   }
 
   function handleAllPokemons(e){
     dispatch(pokemonsInDb(e.target.value))
-    // if(e.target.value === 'created' && currentPokemons.length !== 0){
-    //   alert("If you have created at least one it will appear, but if it isn't the page will show the original ones")
-    //   dispatch(getPokemons())
-    // } 
   }
 
 
@@ -72,7 +69,7 @@ export default function Home(){
   return (
     
     <div className='home'>
-      <SearchBar />
+      <SearchBar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         <br />
       <div className='filters'>
         <div className='alp-strong'>
@@ -105,12 +102,12 @@ export default function Home(){
           </select>
         <div className='create-show'>
           <Link to='/pokemon' className='create-link'>
-           <button className='creat' to='/pokemon' >Create Pokemon</button>
+           <button className='creat' to='/pokemon' >Create Pokemon!</button>
         </Link>
         </div>
         <div>
           <button className='show' onClick={(e) => handleClick(e)}>
-            Show Me All Again!
+            Start Again
           </button>
         </div>
         </div> 
@@ -120,9 +117,11 @@ export default function Home(){
      
       <div className='pagin'>
         <Paginate 
-        pokemonPerPage={pokemonsPerPage}
-        pokemons={pokemons.length}
-        paginate={paginate}
+          pokemonPerPage={pokemonsPerPage}
+          pokemons={pokemons.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
       />
       </div>
       <div className='container' >
