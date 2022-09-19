@@ -8,7 +8,8 @@
   background-size: 1100px 700px;
   background-attachment: fixed;
   padding-bottom: -150px;
-  /* margin-right: -100px; */
+  min-width: 900px;
+  min-height: 625px;
   
 }
 
@@ -25,7 +26,7 @@
   flex-direction: row;
   margin-left: 245px;
   width: 80%;
-  /* min-height: 1300px; */
+
 }
 
 
@@ -86,7 +87,7 @@
   padding: 0px;
   background-color: rgb(167, 35, 35);
   border-bottom: 2px solid black;
-  z-index: 1; /*  PROPIEDAD IMPORTANTE - PROPIEDAD IMPORTANTE - PROPIEDAD IMPORTANTE */
+  z-index: 1;               /*  PROPIEDAD IMPORTANTE */
 
 }
 
@@ -95,7 +96,7 @@
   height: 25px;
   flex-direction: row;
   color: black;
-  margin-left: 260px;
+  margin-left: 300px;
   border: 1px solid rgb(140, 212, 32);
   font-size: 13px;
   
@@ -128,11 +129,8 @@
   position: fixed;
   height: 85%;
   margin-top: 83px;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.2)), url('https://steamuserimages-a.akamaihd.net/ugc/105106022019032191/B0ABAE901B0ADFDD725E29136D5F7DF1A92F2C4E/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false'); */
   background-size: 280px 600px;
   width: 234px;
-  /* border-right: 3px solid black; */
-  /* border-top: 2px solid black; */
   opacity: 0.9;
   background-color:  rgb(231, 236, 218);
   
@@ -156,7 +154,6 @@
 
 .pagin{
   margin-top: 150px;
-  /* position: fixed; */
 }
 
 .creat{
@@ -167,7 +164,7 @@
   border-radius: 5px;
   cursor: pointer;
   width: 160px;
-  border: 2px solid blue;
+  border: 1.8px solid blue;
   font-size: 15px;
 }
 
@@ -182,7 +179,7 @@
   border-radius: 5px;
   cursor: pointer;
   width: 160px;
-  border: 2px solid blue;
-  font-size: 13px;
+  border: 1.8px solid blue;
+  font-size: 14px;
 }
 

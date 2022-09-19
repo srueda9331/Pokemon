@@ -11,11 +11,12 @@
 .number{
   margin: 10px;
   padding: 10.5px;
-  background-color: white;
+  background:  rgb(231, 236, 218);
+
   border: 1px solid black;
   border-radius: 6px;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.9;
   color: black;
   font-weight: bold;
 
@@ -26,4 +27,19 @@
   color: red;
   font-weight: bold;
   border: 1.7px solid red;
+}
+
+.prev-next{
+  margin: 10px;
+  padding: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 8px;
+  font-size: 20px;
+  background:  rgb(231, 236, 218);
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;
+  opacity: 0.9;
+  font-weight: bold;
 }
