@@ -11,7 +11,7 @@ const getAllPokemons = async () => {
     let pokemonApi;
     let allApiPokemons = [];
 
-    for (let i = 1; i <= 40; i++) {
+    for (let i = 1; i <= 16; i++) {
       pokemonApi = await axios.get('https://pokeapi.co/api/v2/pokemon/' + i)
       let eachPokemon = {
         id: pokemonApi.data.id,

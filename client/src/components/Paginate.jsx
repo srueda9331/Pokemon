@@ -14,9 +14,7 @@ export default function Paginate({pokemonPerPage, pokemons, paginate}){
         {
           pageNumber?.map((number) => 
             (
-              
-                 <a className='eachN' onClick={() => paginate(number)}>{number + ' ' }</a>
-              
+                 <button className='number' onClick={() => paginate(number)}>{number + ' ' }</button>
             )
           )
         }

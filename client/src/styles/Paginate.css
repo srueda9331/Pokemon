@@ -8,13 +8,22 @@
   
 }
 
-.eachN{
+.number{
   margin: 10px;
-  padding: 10px;
+  padding: 10.5px;
   background-color: white;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.6;
+  color: black;
+  font-weight: bold;
+
+
 }
 
+.number:focus{
+  color: red;
+  font-weight: bold;
+  border: 1.7px solid red;
+}
