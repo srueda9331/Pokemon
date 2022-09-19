@@ -7,12 +7,12 @@ import { useDispatch } from "react-redux";
 import { searchPokemon } from "../actions";
 
 
-export function SearchBar(){
+export function SearchBar({currentPage, setCurrentPage}){
   const dispatch = useDispatch()
 
   const [message, setMessage] = useState('')
   const [name, setName ] = useState('')
-  const [img, setImg ] =useState('')
+  const [load, setLoad ] =useState('')
 
   function handleInputChange(e){
     e.preventDefault()
@@ -21,21 +21,14 @@ export function SearchBar(){
 
   async function handleSubmit(e){
     e.preventDefault()
-    let d
     if(name){
       setMessage('')
-      setImg('d')
-      
+      setLoad('d')
       await dispatch(searchPokemon(name))
-      // if(d.payload === 'Not found'){
-      //   // alert('Sorry, this pokemon cannot be found')
-      //   setMessage('Sorry, this pokemon cannot be found')
-      // }
-      
       setName('')    
       setMessage('')
-      setImg('')
-
+      setLoad('')
+      setCurrentPage(1)
     } if(!name){
       setMessage('Write a name please') 
       setName('') 
@@ -53,9 +46,8 @@ export function SearchBar(){
         <input className='bar' type='text' onChange={(e) => handleInputChange(e)} placeholder='Search by name only' />
         <button className='bar-button' type='submit' onClick={(e) => handleSubmit(e)}>Search</button>
         {
-          img === 'd' && (
+          load === 'd' && (
             <div onChange={handleInputChange}>
-              {/* <span className='img-search'>Loading</span> */}
               <span><img style={{width: '64px', marginLeft:'7px', marginTop:'45px'}} alt='load-gif' src={loading} /></span>
             </div> 
           )
@@ -67,7 +59,7 @@ export function SearchBar(){
             </div>
           )
         }
-        <img style={{padding:'2px', marginLeft:'50px', position:'fixed', marginLeft:'1100px'}}src={pikachu} alt="pikachu" />
+        <img style={{padding:'2px', position:'fixed', marginLeft:'1100px'}}src={pikachu} alt="pikachu" />
 
         </div>
         
