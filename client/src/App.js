@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/home';
-import Main from './components/main';
-import { PokemonCreate } from './components/pokemonCreate';
-import { PokemonDetail } from './components/pokemonDetail';
+import Home from './components/Home';
+import Main from './components/Landing';
+import { PokemonCreate } from './components/PokemonCreate';
+import { PokemonDetail } from './components/PokemonDetail';
 
 
 function App() {

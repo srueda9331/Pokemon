@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createPokemon, getTypesNames, getPokemons } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
-import swal from 'sweetalert'
+// import swal from 'sweetalert'
 
 
 

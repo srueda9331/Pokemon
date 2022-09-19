@@ -1,4 +1,4 @@
-import '../styles/home.css'
+import '../styles/Home.css'
 import React, { useState }  from "react";
 import { useDispatch } from "react-redux";
 import { searchPokemon, getPokemons } from "../actions";
