@@ -16,25 +16,37 @@ module.exports = (sequelize) => {
     },
     image: {
       type: DataTypes.STRING,
-      defaultImage: 'https://scontent.feoh4-4.fna.fbcdn.net/v/t1.18169-9/10520757_471623979641258_8353558783947765781_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Reb0HBwp80AAX-Z5Zu-&_nc_ht=scontent.feoh4-4.fna&oh=00_AT-wAxCXQz9Wqu8JbbrMVFhY599VdNZWSydqAO-TGQ2Kvg&oe=62D93831'
+      allowNull: false
     },
     hp: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     attack: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     defense: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     speed: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10
     },
     height: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     weight: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    createdInDb: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
     }
   });
 };
