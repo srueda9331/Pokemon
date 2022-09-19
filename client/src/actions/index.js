@@ -46,12 +46,16 @@ export function searchPokemon(name){
       let findPokemon = await axios.get('http://localhost:3001/pokemons?name=' + name);
       
       return dispatch({
-          type: SEARCH_POKEMON, 
-          payload: findPokemon.data
-        })
+        type: SEARCH_POKEMON, 
+        payload: findPokemon.data
+      })
       
     } catch (error) {
       console.log(error);
+      return dispatch({
+        type: SEARCH_POKEMON, 
+        payload: {message: "Sorry, there's no pokemon with that name"}
+      })
     }
   }
 }
@@ -85,6 +89,7 @@ export function getPokemonDetail(id){
   return async function(dispatch){
     try {
       let pokemonDetail = await axios.get('http://localhost:3001/pokemons/' + id);
+      console.log(pokemonDetail);
       return dispatch({
         type: GET_POKEMON_DETAIL,
         payload: pokemonDetail.data
@@ -92,6 +97,7 @@ export function getPokemonDetail(id){
       
     } catch (error) {
       console.log(error);
+      
     }
   }
 }
