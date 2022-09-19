@@ -12,7 +12,7 @@ export function PokemonDetail(){
   const history = useHistory()
   const [pokemon, setPokemon] = useState(null)
   let {id} = useParams()
-
+  window.scroll(0,0)
 
   useEffect(() => {
     axios.get('http://localhost:3001/pokemons/' + id )
