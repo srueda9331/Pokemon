@@ -112,7 +112,7 @@ router.post('/', async (req, res) => {
   if(!name) {throw new TypeError({msg: 'No name'})}
   let atLeatOne = await Pokemon.findOne({ where : {name: name.toLocaleLowerCase()}})
   if(atLeatOne) {throw new Error('The pokemon with that name already exists')}
-  // if(!image && !hp && !attack && !defense && !height && !weight) res.status(400).send('There are missing fields')
+  if(!image && !hp && !attack && !defense && !height && !weight && !speed) res.status(400).send('There are missing fields')
 
     let newPokemon = await Pokemon.create({
       name,
