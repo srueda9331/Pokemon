@@ -1,4 +1,4 @@
-import '../styles/pokemonDetail.css'
+import '../styles/PokemonDetail.css'
 import circle from '../image/circle1.png'
 import circleWhite from '../image/circulo-blanco.png'
 import React, { useState } from "react";
