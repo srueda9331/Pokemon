@@ -8,5 +8,6 @@
  <br />
 <li>In the following picture now you can see that I focus on the branch develop, so click here and then you're going to see my real project</li>
  <br />
-<img src='https://user-images.githubusercontent.com/90795981/191150092-8c730f54-9cce-40df-827c-c930ff969383.png' width='700px' height='300px'/>
+<img src='https://user-images.githubusercontent.com/90795981/191150411-e78e24f5-cd35-420c-ad1f-f649fb263d25.png' width='900px' height='400px'/>
+
 
