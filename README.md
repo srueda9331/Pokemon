@@ -1,6 +1,6 @@
 <h1>Introduction</h1>
 <br />
-<p>Please click on this link <a href='a' />Pokemon App</a> to go to the point or if you like there's some indications with images which are needed to follow in order to see the full project:</P>
+<p>Please click on this link <a href='https://github.com/srueda9331/Pokemon/tree/develop' />Pokemon App</a> to go to the point or if you like there's some indications with images which are needed to follow in order to see the full project:</P>
 <ul>
 <li>In this same screen, you have to click on the branch 'develop' in the deployable menu (the area marked with a red circle), let's take a look at the example below</li>
  <br />
