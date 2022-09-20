@@ -15,7 +15,7 @@ export function PokemonDetail(){
   window.scroll(0,0)
 
   useEffect(() => {
-    axios.get('http://localhost:3001/pokemons/' + id )
+    axios.get(`/pokemons/` + id )
     .then(res => {
       setPokemon(res.data)
     })
