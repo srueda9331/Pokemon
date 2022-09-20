@@ -1,7 +1,7 @@
 .home{
   padding-bottom: 180px;
   /* background-position: right; */
-  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://geeky.com.ar/wp-content/uploads/2018/11/wp2692587-e1543262552286-1024x672.jpg.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('../image/background1.webp');
   background-repeat: no-repeat;
   background-position-x: 232px;
   background-position-y: 60px;
@@ -9,7 +9,7 @@
   background-attachment: fixed;
   padding-bottom: -150px;
   min-width: 900px;
-  min-height: 625px;
+  min-height: 1000px;
   
 }
 

@@ -5,7 +5,7 @@ body, html {
  }
  
  .background-main {
- background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url('https://phantom-marca.unidadeditorial.es/2a6bb9293b020d388e4c1b1d3e640f1a/resize/1320/f/jpg/assets/multimedia/imagenes/2021/02/28/16145196328904.jpg');
+ background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0)), url('../image/landing.jpg');
  height: 802px;
  width: 1300px;
  background-position: center;
