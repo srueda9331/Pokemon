@@ -11,4 +11,5 @@
 <img src='https://user-images.githubusercontent.com/90795981/191150411-e78e24f5-cd35-420c-ad1f-f649fb263d25.png' width='900px' height='400px'/>
  <br />
 <li>Now if you see something like this, it means that you're already in the branch where everything has been uploaded</li>
+<img src='https://user-images.githubusercontent.com/90795981/191152609-9b4a092c-9abc-498c-a62d-edd21169780b.png' width='900px' height='400px'/>
 
