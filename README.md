@@ -5,5 +5,8 @@
 <li>You have to click on the branch 'develop' in the deployable menu, let's take a look at the example below</li>
  <br />
 <img src='https://user-images.githubusercontent.com/90795981/191148114-74f2c2e1-33eb-423f-91e1-158cafcbc696.png' width='1000px' height='420px'/>
+ <br />
 <li>In the following picture now you can see that I focus on the branch develop, so click here and then you're going to see my real project</li>
+ <br />
+<img src='https://user-images.githubusercontent.com/90795981/191150092-8c730f54-9cce-40df-827c-c930ff969383.png' width='700px' height='300px'/>
 
