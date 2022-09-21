@@ -42,6 +42,7 @@ export default function Home(){
 
   function handleAllPokemons(e){
     dispatch(pokemonsInDb(e.target.value))
+    setCurrentPage(1);
   }
 
 
@@ -82,7 +83,6 @@ export default function Home(){
         <select className='selects' style={{marginTop: '10px'}} onClick={e => {handleAttack(e)}} name="" id="">
           <option value='strong'>Stronger to Weaker</option>
           <option value='weak'>Weaker to Stronger</option>
-          <option value='all'>Set initial state</option>
         </select>
 
         </div>

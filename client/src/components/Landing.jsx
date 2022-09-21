@@ -12,6 +12,5 @@ export default function Main(){
         <button className='main-button'>Go ahead!</button>
       </Link>
     </div>
-  
   )
 }
