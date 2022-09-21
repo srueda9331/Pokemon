@@ -106,7 +106,7 @@ case ORDER_BY_ATTACK:
  state.pokemons.sort((a,b) => a.attack - b.attack) 
  return {
    ...state,
-   pokemons: action.payload ==='all'? state.pokemonsAgain : [...sortAttack] 
+   pokemons: [...sortAttack] 
  }
 case ORDER_BY_ID:
  
