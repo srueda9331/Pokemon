@@ -1,0 +1,35 @@
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 245px;
+  width: 82%;
+}
+
+.pokemons{
+  vertical-align: top;
+  margin: 18px;
+  margin-top: 20px;
+}
+
+.pokeball{
+  height: 210px;
+  margin-left: 210px;  
+}
+
+
+
+.title-loading{
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+  font-family: arial;
+  padding-bottom: 0px;
+  margin-top: 80px;
+  margin-left: 60px;
+  
+}

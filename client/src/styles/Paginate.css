@@ -1,11 +1,8 @@
 .paginated{
-  /* display: flex;
-  flex-direction: row;
-  margin: 0px; */
   color: red;
   font-weight: bold;
   margin-left: 200px;
-  
+
 }
 
 .number{
@@ -42,4 +39,12 @@
   color: black;
   opacity: 0.9;
   font-weight: bold;
+}
+
+.left {
+  visibility: hidden;
+}
+
+.right {
+  visibility: hidden;
 }

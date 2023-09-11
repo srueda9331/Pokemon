@@ -14,8 +14,8 @@ pokemons: [],
 pokemonsAgain : [],
 types: [],
 detail: {},
-filtered: []
-
+filtered: [],
+enable: ''
 }
 
 function reducer(state = initialState, action){
@@ -34,6 +34,7 @@ case SEARCH_POKEMON:
    ...state,
    // pokemons: action.payload === 'Not found'?  state.pokemonsAgain  : action.payload
    pokemons: [action.payload]
+
  }
 case GET_TYPES:
  return {

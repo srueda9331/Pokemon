@@ -41,10 +41,10 @@ export function getPokemons(){
 }
 
 export function searchPokemon(name){
+
   return async function(dispatch){
     try {
       let findPokemon = await axios.get(`/pokemons?name=` + name);
-      
       return dispatch({
         type: SEARCH_POKEMON, 
         payload: findPokemon.data
@@ -54,7 +54,7 @@ export function searchPokemon(name){
       console.log(error);
       return dispatch({
         type: SEARCH_POKEMON, 
-        payload: {message: "Sorry, there's no pokemon with that name"}
+        payload: {message: "Sorry, there's no any pokemon with that name"}
       })
     }
   }
